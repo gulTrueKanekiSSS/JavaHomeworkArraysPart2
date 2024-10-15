@@ -17,11 +17,25 @@ public class Main {
         //task 2
         int [] monthlyPayments2 = {20000, 215000, 256, 3000, 5255};
 
-        Arrays.sort(monthlyPayments2);
+//        Arrays.sort(monthlyPayments2);
+//
+//        System.out.println("Минимальная сумма трат за неделю составила " + monthlyPayments2[0] +  "рублей. Максимальная " +
+//                "сумма трат за неделю составила " + monthlyPayments2[monthlyPayments2.length - 1] + " рублей");
 
-        System.out.println("Минимальная сумма трат за неделю составила " + monthlyPayments2[0] +  "рублей. Максимальная " +
-                "сумма трат за неделю составила " + monthlyPayments2[monthlyPayments2.length - 1] + " рублей");
+        int minimalPay = monthlyPayments2[0];;
+        int maximumPay = 0;
 
+
+        for (int pay : monthlyPayments2){
+            if (pay > maximumPay){
+                maximumPay = pay;
+            }
+            else if (pay < minimalPay) {
+                minimalPay = pay;
+            }
+        }
+
+        System.out.println("Минимальная сумма трат за неделю составила " + minimalPay + " рублей. Максимальная сумма трат за неделю составила " + maximumPay + " рублей");
         //task 3
         int [] monthlyPayments3 = {20000, 215000, 256, 3000, 5255};
 
